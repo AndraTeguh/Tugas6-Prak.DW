@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuaca Jakarta dengan WeatherAPI</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #80deea);
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      h1 {
+        color: #005b96;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        gap: 20px;
+      }
+      .weather-info img,
+      .forecast img {
+        width: 80px;
+        height: auto;
+      }
+      .weather-info h2,
+      .forecast h2 {
+        font-size: 1.4rem;
+        color: #006064;
+        margin-bottom: 5px;
+      }
+      .weather-info p,
+      .forecast p {
+        margin: 0;
+        font-size: 1rem;
+        color: #444;
+      }
+      .forecast {
+        width: 100%;
+      }
+      .day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        transition: background 0.3s ease;
+      }
+      .day:last-child {
+        border-bottom: none;
+      }
+      .day:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .day-details {
+        flex: 1;
+        margin-left: 10px;
+        text-align: left;
+      }
+      h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #005b96;
+      }
+      p {
+        margin: 5px 0;
+        color: #555;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .day {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .day img {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cuaca di Jakarta</h1>
+    <div class="container">
+      <div id="current-weather" class="weather-info">
+        <!-- Cuaca hari ini akan ditampilkan di sini -->
+      </div>
+      <h2>Ramalan Cuaca 7 Hari ke Depan</h2>
+      <div id="weather-forecast" class="forecast">
+        <!-- Ramalan cuaca akan ditampilkan di sini -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
